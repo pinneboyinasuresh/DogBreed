@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:#000;
+}
+
+nav a{
+    margin-left:20px;
+    color:#fff;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    color:orange;
+}
+
+/* INSPECT */
+.inspect{
+    padding:60px;
+    text-align:center;
+}
+
+.inspect input{
+    padding:10px;
+}
+
+.inspect button{
+    padding:10px 20px;
+    background:orange;
+    border:none;
+    cursor:pointer;
+}
+
+/* RESULT GRID */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.card{
+    background:#111;
+    margin:10px;
+    padding:15px;
+    border-radius:10px;
+}
+
+.card img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+}
+
+.card p{
+    margin-top:10px;
+    color:orange;
+    font-weight:bold;
+}
+
+/* ABOUT & CONTACT */
+.about, .contact{
+    padding:60px;
+    text-align:center;
+    background:#fff;
+    color:#000;
+}

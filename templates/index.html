@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Breed Identification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h2>DOG BREED.</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#inspect">Inspect</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Dog Breed Identification</h1>
+    <p>Upload dog images and get predictions instantly</p>
+</section>
+
+<section id="inspect" class="inspect">
+    <h2>Upload Dog Images</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" multiple required>
+        <br><br>
+        <button type="submit">Predict Breeds</button>
+    </form>
+
+    {% if results %}
+        <h2>Predictions:</h2>
+        <div class="grid">
+            {% for img, pred in results %}
+                <div class="card">
+                    <img src="{{ url_for('static', filename=img) }}">
+                    <p>{{ pred }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
+
+<section id="about" class="about">
+    <h2>About Project</h2>
+    <p>
+        This project uses a deep learning CNN model (VGG19) to identify dog breeds
+        from uploaded images and provides real-time predictions using a Flask web app.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@dogbreed.ai</p>
+</section>
+
+</body>
+</html>
