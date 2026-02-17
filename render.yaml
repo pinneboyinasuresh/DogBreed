@@ -3,6 +3,7 @@ services:
     name: dogbreed-app
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
-    pythonVersion: 3.10
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    runtime: python
+    pythonVersion: "3.10"
