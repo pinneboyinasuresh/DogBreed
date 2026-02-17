@@ -3,4 +3,4 @@ gunicorn
 numpy
 pillow
 h5py
-tensorflow==2.16.1
+tensorflow-cpu==2.12.0
